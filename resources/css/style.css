@@ -219,7 +219,7 @@ header .mobile {
 #features-section {
   display: flex;
   justify-content: space-between;
-  padding: 4rem 5%;
+  padding: 4rem 5% 2.875rem 5%;
   background-color: #f3f3f3;
 }
 
@@ -230,15 +230,15 @@ header .mobile {
   background-color: white;
 }
 
-
 .feature .image-container {
-  width: 90%;
+  width: 100%;
   height: 65%;
   margin: 0 auto;
 }
 
 .feature img {
   max-width: 100%;
+  margin-bottom: 2.5rem;
 }
 
 .feature h2 {
@@ -306,8 +306,14 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
+  flex-direction: row;
   max-width: 100%;
   padding: 0 1%;
+}
+
+#filters-section .image-container img {
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -344,13 +350,17 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
-}
-
-#quotes-section content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .content.center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -359,25 +369,47 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+
+  #quotes-section {
+    padding: 2rem 0;
+  }
+
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
+    text-align: left;
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
   }
+}
+
+@media only screen and (max-width: 565px) {
+
+  #quotes-section .content.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #quotes-section .quote {
+    text-align: center;
+    padding-right: 0;
+  }
+
 }
 
 /* Footer */
